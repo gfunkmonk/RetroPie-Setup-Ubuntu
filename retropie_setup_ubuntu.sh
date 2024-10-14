@@ -65,8 +65,10 @@ function install_retropie() {
     # used in the RetroPie image (as applicable)
     # See https://github.com/RetroPie/RetroPie-Setup/blob/master/scriptmodules/admin/image.sh
     cd $USER_HOME
-    git clone --depth=1 https://github.com/RetroPie/RetroPie-Setup.git
+    git clone --depth=1 https://github.com/gfunkmonk/RetroPie-Setup.git
     git config --global --add safe.directory /home/pi/RetroPie-Setup
+    git clone --depth=1 https://github.com/gfunkmonk/RetroPie-Extra.git
+    git config --global --add safe.directory /home/pi/RetroPie-Extra
 
     UNKNOWN_PLATFORM=$($USER_HOME/RetroPie-Setup/retropie_packages.sh setup | grep "Unknown platform" | wc -l)
 	if [[ $UNKNOWN_PLATFORM > 0 ]]; then
