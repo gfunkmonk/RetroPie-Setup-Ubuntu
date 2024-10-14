@@ -155,6 +155,8 @@ function install_latest_nvidia_drivers() {
     echo "--------------------------------------------------------------------------------"
     apt-get install -y $APT_RECOMMENDS ubuntu-drivers-common
     add-apt-repository -y ppa:graphics-drivers/ppa
+    add-apt-repository ppa:kelebek333/nvidia-legacy
+    add-apt-repository ppa:oibaf/graphics-drivers
     ubuntu-drivers autoinstall
     echo -e "FINISHED install_latest_nvidia_drivers \n\n"
     sleep 2
