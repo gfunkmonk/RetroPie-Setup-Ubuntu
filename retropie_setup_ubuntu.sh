@@ -142,6 +142,7 @@ function install_latest_intel_drivers() {
     echo "| This may throw errors on a new release if this PPA does not supportit yet (OK)."
     echo "--------------------------------------------------------------------------------"
     add-apt-repository -y ppa:ubuntu-x-swat/updates
+    add-apt-repository -y ppa:kisak/kisak-mesa
     apt-get update && apt-get -y upgrade
     echo -e "FINISHED install_latest_intel_drivers \n\n"
     sleep 2
